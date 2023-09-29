@@ -1,0 +1,33 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color:#BFDBED;
+}
+
+.grid_container {
+
+max-width: 1000px;
+display: grid;
+grid-template-columns: repeat(6 1fr);
+grid-auto-rows: auto;
+grid-template-areas: 
+"header header header header header header"
+"main main main main main main"
+"footer footer footer footer footer footer"
+;
+
+}
+
+.header {
+
+background-color:#cfe4f2;
+
+}
+
+.header .icon .icon_header {
+    border: #1593e1;
+    width: 4rem;
+    padding:  10px;
+
+}
