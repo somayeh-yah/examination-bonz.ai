@@ -9,93 +9,61 @@ body {
   background-color: #bfdbed;
 }
 
-h2 {
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 2.2rem;
-  font-weight: 900;
-  margin: 0;
-  color: #ffffff;
-}
-
-h3 {
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-  color: #000000;
-}
-
-p {
-  font-family: Fira Sans;
-  font-size: 14px;
-  color: #00000099;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
   grid-template-areas:
-    "header header header header header header"
-    "main main main main main main"
-    "footer footer footer footer footer footer";
+    "grid_header grid_header grid_header grid_header grid_header grid_header"
+    "grid_main grid_main grid_main grid_main grid_main grid_main"
+    "grid_aside grid_aside grid_aside grid_aside grid_aside grid_aside"
+    "grid_footer grid_footer grid_footer grid_footer grid_footer grid_footer";
   max-width: 100%;
 }
 
-.header {
-  grid-area: header;
+.grid_header {
+  grid-area: grid_header;
   background-color: #cfe4f2;
-  border-bottom: solid 3px;
- 
+  border-bottom: 1px solid #3f3d3d;
+  
 }
 
-.header .icon .header {
+.grid_header .icon .header {
   border: #1593e1;
-  width: 4rem;
+  width: 5rem;
   padding: 10px;
 }
 
-.footer .icon .footer {
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  width: 5rem;
-  padding: 20px;
-}
-
-.header .nav_page_up ul {
+.grid_header .nav_page_up ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.header .nav_page_up ul .link {
+.grid_header .nav_page_up ul .link {
+  text-decoration: none;
+  
   color: gray;
 }
 
-.header .nav_page_up ul .link:hover {
+.grid_header .nav_page_up ul .link:hover {
   color: #35393c;
 }
 
 
-.main {
-  grid-area: main;
+.grid_main {
+  grid-area: grid_main;
   background-image: url(/assets/photos/wallpaperflare.com_wallpaper\(5\)\(1\).jpg);
   background-size: cover;
-
   height: 25rem;
-
   transform: translateY(0px);
-  
   background-repeat: no-repeat;
  
 
 }
 
 
-.main .aside_first {
+.grid_main .main_aside_first {
 
     display: flex;
     flex-direction: column;
@@ -104,8 +72,8 @@ p {
    
 }
 
-.aside_first h1 {
-    justify-content: center;
+.grid_main .main_aside_first h1 {
+    
     text-align: center;
     font-family: "Frank Ruhl Libre", serif;
     font-size: 2.5rem;
@@ -115,8 +83,8 @@ p {
 
 }
 
-.aside_first h2 {
-  justify-content: center;
+.grid_main .main_aside_first h2 {
+ 
     text-align: center;
     font-family: "Frank Ruhl Libre", serif;
     font-size: 1rem;
@@ -124,4 +92,167 @@ p {
     color:rgb(133, 132, 132);
 
 }
+
+
+
+.grid_main .main_article {
+  background-color:#cfe4f2;
+  padding: 5.5rem;
+  transform: translateY(300px);
+  border-top: 1px solid #3f3d3d;
+}
+
+.grid_main .main_article h2 {
+  text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 2.5rem;
+  color: white;
+  transform: translateY(-43px);
+ 
+
+}
+
+.grid_main .main_article p {
+  text-align: center;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1rem;
+  color:rgb(133, 132, 132);
+  line-height: 1;
+  transform: translateY(-51px);
+}
+
+.grid_aside {
+  grid-area:grid_aside;
+  background-color:#cfe4f2;
+  display: flex;
+  justify-content:center;
+  
+}
+
+.grid_aside .pic_box {
+
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  border: 1px solid #3f3d3d;
+  border-radius: 4px;
+  margin: 2.5rem;
+  padding: 1rem;
+  transform: translateY(262px);
+
+}
+
+.grid_aside .pic_box h2 {
+  font-size: 28px;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(29, 26, 26);
+}
+
+.grid_aside .pic_box p {
+  font: inherit;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+  color:rgb(9, 8, 8);
+}
+
+.grid-container .grid_aside  .confrence .breakfast .spa {
+  width: 100%;
+  height:160px;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.grid_aside .confrence {
+  width: 100%;
+  height: 19rem;
+  background-image: url("/assets/photos/southgate-motel-hotel-accommodation-mount-gambier-13.jpg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: inherit;
+  background-color: #C7DDEA;
+   
+}
+
+.grid_aside .breakfast {
+
+  width: 100%;
+  height: 19rem;
+  background-image: url("/assets/photos/1024x768_DUX82_breakfast-fbh-june2022-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: inherit;
+  background-color: #C7DDEA;
+
+}
+
+.grid_aside .spa {
+
+  width: 100%;
+  height: 19rem;
+  background-image: url("/assets/photos/spa_och_terasser_02.jpg-900x500-720x800.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: inherit;
+  background-color: #C7DDEA;
+
+}
+
+.grid_footer {
+  grid-area: grid_footer;
+  background-color: #333;  
+  transform: translateY(356px);
+ display: flex;
+ flex-direction: column;
+ border: #333;
+}
+
+.grid_footer .nav_page_down {
+
+  display: flex;
+  gap: 20px;
+  margin-top: 58px;
+  text-align: left;
+}
+
+
+
+
+.grid_footer nav .nav_page_down a {
+ display: flex;
+ text-decoration: none;
+
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1rem;
+  color:rgb(133, 132, 132);
+  line-height: 1;
+ 
+
+
+}
+
+.grid_footer nav .nav_page_down a:hover {
+
+  color: #bfdbed;
+}
+
+.grid_footer .icon_footer {
+
+ width: 3rem;
+ display: flex;
+ justify-content: left;
+ padding-top: 3rem;
+ margin: 0.5rem;
+}
+
+
+
+
 
