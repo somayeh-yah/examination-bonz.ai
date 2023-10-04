@@ -39,6 +39,11 @@ body {
   align-items: center;
 }
 
+.nav_page_up div a img{
+
+  display: none;
+}
+
 .nav_page_sec {
   margin-left: 8rem;
 
@@ -111,6 +116,14 @@ list-style: none;
   color: rgb(29, 26, 26);
 }
 
+.grid_aside {
+  grid-area: grid_aside;
+  background-color: #cfe4f2;
+  display: flex;
+  justify-content: center;
+}
+
+
 .main_article {
   background-color: #cfe4f2;
   padding: 5.5rem;
@@ -134,12 +147,6 @@ list-style: none;
   
 }
 
-.grid_aside {
-  grid-area: grid_aside;
-  background-color: #cfe4f2;
-  display: flex;
-  justify-content: center;
-}
 
 .grid-bottom {
   grid-area: grid-bottom;
@@ -254,20 +261,19 @@ list-style: none;
 
 .grid_footer .social_media .icons {
   list-style: none;
-
   margin: 10px;
   line-height: 2.5rem;
 }
 
 
-.contact-us h2 {
+.grid_footer .contact-us h2 {
   text-decoration: underline 0.5px;
   align-items: center;
   color: #f5f5f5;
   margin: 20px;
 }
 
-.contact-us p {
+.grid_footer .contact-us p {
   font-family: "Frank Ruhl Libre", serif;
   font-size: 1rem;
   color: #ffffff;
@@ -281,14 +287,7 @@ list-style: none;
 }
 
 
-.page-rooms-container .form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #92c4e3;
-}
+ /*----------härifrån börjar book/booking ------------------*/
 
 .form .submit {
   background: white;
@@ -521,32 +520,33 @@ main {
 
     position: relative;
   }
-
-  .grid-bottom {
-    flex-direction: column;
-    margin: 0;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .pic_box {
-    margin: 0;
-  }
-  
-  .contact-us{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
+ 
   .grid-container .grid_header {
     grid-area: grid_header;
     display: flex;
     flex-direction: column;
     width: auto;
   }
+  
+  .nav_page_up .nav_page_sec {
+   
+    display: none;
+  }
 
+  .nav_page_up div a img{
+
+    display: flex;
+
+  }
+
+.nav_page_up a {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 33px;
+  margin-right: 10px;
+
+}
 
   .grid-container .main_aside_first h1 {
     color: white;
@@ -555,6 +555,14 @@ main {
   .grid-container .main_aside_first h2 {
     display: none;
   }
+
+  .grid_aside {
+    grid-area: grid_aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   .grid-container .main_article h2 {
     margin: 0px;
@@ -566,15 +574,22 @@ main {
     line-height: 1.5;
   }
 
-  .grid_aside {
-    grid-area: grid_aside;
-    display: flex;
+ .grid-bottom {
     flex-direction: column;
+    margin: 0;
     align-items: center;
+    margin-bottom: 1rem;
   }
 
- .pic_box {
-    margin-top: 82px;
+  .pic_box {
+    margin: 0;
+  }
+
+  .contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .grid_footer {
@@ -584,4 +599,49 @@ main {
     align-items: center;
     height: 53rem;
   }
+ 
+  .main-booking .form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 50%;
+    background-color: #cfe4f2;
+    margin-right: 409px;
+  }
+
+  .form label {
+    margin-right: 89px;
+  }
+
+ 
+  .form input {
+
+    width: 120px;
+  }
+
+  .form .submit {
+
+    width: 30%;
+    margin-top: 2.3rem;
+    
+  }
+
+  .pic {
+
+  display: grid;
+  grid-template-columns: repeat(1, 24rem);
+  grid-template-rows: auto;
+  padding-left: 13rem;
+  padding-right: 9rem;
+  margin-bottom: 5rem;
+  }
+
+  .pic-items:nth-child(3) > p {
+    
+    width: 65%;
+  }
+
+
+
 }
