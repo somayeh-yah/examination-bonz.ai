@@ -6,16 +6,18 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  background-color: #cfe4f2;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
+  grid-auto-rows:auto;
   grid-template-areas:
     "grid_header grid_header grid_header grid_header grid_header grid_header"
     "grid_main grid_main grid_main grid_main grid_main grid_main"
     "grid_aside grid_aside grid_aside grid_aside grid_aside grid_aside"
+    "grid-bottom grid-bottom grid-bottom grid-bottom grid-bottom grid-bottom"
     "grid_footer grid_footer grid_footer grid_footer grid_footer grid_footer";
   max-width: 100%;
 }
@@ -31,28 +33,58 @@ body {
   padding: 10px;
 }
 
-.grid_header .nav_page_up ul {
+.nav_page_up {
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
 }
 
-.grid_header .nav_page_up ul .link {
+.nav_page_sec {
+  margin-left: 8rem;
+
+}
+
+.nav_page_sec ul {
+display: flex;
+list-style: none;
+}
+
+.nav_page_sec ul li a {
   text-decoration: none;
-
   color: rgb(9, 8, 8);
+  padding-left: 6rem;
 }
 
-.grid_header .nav_page_up ul .link:hover {
+
+ ul .link:hover {
   color: whitesmoke;
 }
+
+.form {
+
+  background: #beb8b8;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid black 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form input {
+
+  width: 5rem;
+  margin-right: 40px;
+}
+
 
 .grid_main {
   grid-area: grid_main;
   background-image: url(/assets/photos/wallpaperflare.com_wallpaper\(5\)\(1\).jpg);
   background-size: cover;
   height: 25rem;
-  transform: translateY(0px);
+
   background-repeat: no-repeat;
 }
 
@@ -79,28 +111,27 @@ body {
   color: rgb(29, 26, 26);
 }
 
-.grid_main .main_article {
+.main_article {
   background-color: #cfe4f2;
   padding: 5.5rem;
-  transform: translateY(300px);
-  border-top: 1px solid #3f3d3d;
+   border-top: 1px solid #3f3d3d;
 }
 
-.grid_main .main_article h2 {
+.main_article h2 {
   text-align: center;
   font-family: "Frank Ruhl Libre", serif;
   font-size: 2.5rem;
   color: white;
-  transform: translateY(-43px);
+ 
 }
 
-.grid_main .main_article p {
+ .main_article p {
   text-align: center;
   font-family: "Frank Ruhl Libre", serif;
   font-size: 1rem;
   color: rgb(29, 26, 26);
   line-height: 1;
-  transform: translateY(-51px);
+  
 }
 
 .grid_aside {
@@ -110,7 +141,16 @@ body {
   justify-content: center;
 }
 
-.grid_aside .pic_box {
+.grid-bottom {
+  grid-area: grid-bottom;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  
+}
+.pic_box {
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
@@ -119,12 +159,12 @@ body {
   max-width: 350px;
   border: 1px solid #3f3d3d;
   border-radius: 4px;
-  margin: 2.5rem;
-  padding: 1rem;
-  transform: translateY(262px);
+  padding-bottom: 3rem;
+  
+ 
 }
 
-.grid_aside .pic_box h2 {
+ .pic_box h2 {
   font-size: 28px;
   font-family: "Montserrat", Sans-serif;
   font-weight: 400;
@@ -135,65 +175,62 @@ body {
   color: rgb(29, 26, 26);
 }
 
-.grid_aside .pic_box p {
+.pic_box p {
   font: inherit;
   padding: 0px 20px 0px 20px;
   text-align: center;
   color: rgb(9, 8, 8);
+  min-width: 20rem;
 }
 
-.grid-container .grid_aside .confrence .breakfast .spa {
-  width: 100%;
-  height: 160px;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
 
-.grid_aside .confrence {
-  width: 100%;
-  height: 19rem;
+
+
+.pic-spa {
+  width: 93%;
+  height: 13rem;
   background-image: url("/assets/photos/southgate-motel-hotel-accommodation-mount-gambier-13.jpg");
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: cover;
   background-position: inherit;
   background-color: #c7ddea;
 }
 
-.grid_aside .breakfast {
-  width: 100%;
-  height: 19rem;
+.pic-brekfast{
+  width: 93%;
+  height: 13rem;
   background-image: url("/assets/photos/1024x768_DUX82_breakfast-fbh-june2022-1.jpg");
   background-repeat: no-repeat;
-  background-size: 130%;
+  background-size: cover;
   background-position: inherit;
   background-color: #c7ddea;
 }
 
-.grid_aside .spa {
-  width: 100%;
-  height: 19rem;
+.pic-confrance {
+  width: 93%;
+  height: 13rem;
   background-image: url("/assets/photos/spa_och_terasser_02.jpg-900x500-720x800.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: inherit;
   background-color: #c7ddea;
 }
 
 .grid_footer {
-  grid-area: grid_footer;
+ 
   background-color: #333;
-  transform: translateY(356px);
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  height: 18rem;
+  padding: 3rem;
+
+
 }
 
 .grid_footer .nav_page_down {
   display: flex;
   gap: 15px;
-  text-align: left;
   flex-direction: column;
+  list-style: none;
 }
 
 .grid_footer nav .nav_page_down a {
@@ -216,19 +253,18 @@ body {
 }
 
 .grid_footer .social_media .icons {
-  width: 15px;
-  height: 15px;
+  list-style: none;
+
   margin: 10px;
+  line-height: 2.5rem;
 }
 
-.grid_footer .footer_logo {
-  display: flex;
-  justify-content: end;
-}
 
 .contact-us h2 {
   text-decoration: underline 0.5px;
+  align-items: center;
   color: #f5f5f5;
+  margin: 20px;
 }
 
 .contact-us p {
@@ -236,55 +272,132 @@ body {
   font-size: 1rem;
   color: #ffffff;
   line-height: 1;
-  display: flex;
-  gap: 15px;
-  text-align: left;
-  flex-direction: column;
+  margin: 20px;
 }
 
 .grid_footer .logo {
-  width: 6rem;
+  width: 7rem;
   padding: 1rem;
 }
 
-.page-rooms-container {
+
+.page-rooms-container .form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  background-color: #cfe4f2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #92c4e3;
 }
 
-.page-rooms-container .pic {
-  background-color: #cfe4f2;
-  padding: 5rem;
+.form .submit {
+  background: white;
+  width: 6%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(11, 10, 10);
+  border-radius: 8px;
 }
 
-.page-rooms-container .pic h1 {
-  text-align: center;
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 2.5rem;
-  font-weight: 1000;
-  margin: 24px;
-  color: whitesmoke;
+.form input {
+  border: 1px solid blueviolet;
 }
 
-.page-rooms-container .pic p {
-  font-family: "Frank Ruhl Libre", serif;
-  font-size: 1.5rem;
-  color: rgb(29, 26, 26);
+.pic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  padding-left: 18rem;
+  padding-right: 6rem;
+  margin-bottom: 7rem;
+ 
+
+}
+
+.pic-items:nth-child(1) {
+  grid-area: 1/1/2/2;
+
+}
+
+.pic-items:nth-child(1) > p {
+  font-size: 15px;
   margin-left: 10px;
-  text-decoration: underline 0.5px;
+  margin-top: 4rem;
 }
 
-.page-rooms-container .pic img {
+
+
+.pic-items:nth-child(2) {
+  grid-area: 2/1/3/2;
+}
+
+.pic-items:nth-child(2) > img {
   width: 100%;
   border: solid 2px;
   margin: 10px;
   border-radius: 10px;
+  height: 100%;
+}
+
+.pic-items:nth-child(3) {
+  grid-area: 3/1/4/4;
+}
+
+.pic-items:nth-child(3)>h3 {
+  margin-left: 10px;
+  font-family: "Frank Ruhl Libre", serif;
+  color: black;
+ text-decoration: underline 0.5px;
+}
+
+.pic-items:nth-child(3) > p {
+
+  font-family: "Frank Ruhl Libre", serif;
+  width: 90%;
+  margin-left: 10px;
+  color: black;
+  }
+
+.pic-items:nth-child(4) {
+  grid-area: 2/2/3/4;
+}
+
+
+
+.pic-items:nth-child(4) > ul li img {
+  width: 30px;
+
+}
+.pic-items:nth-child(4) > ul li {
+  list-style-type: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.pic-items:nth-child(4) > button {
+  padding: 15px 40px;
+  font-weight: bold;
+  border: none;
+  background-color: #a89494;
+  color: white;
+  margin-left: 12px;
+ 
+
+}
+
+
+.page-rooms-container .pic h3 {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.5rem;
+  color: rgb(29, 26, 26);
+  margin-left: 10px;
+ 
 }
 
 .page-rooms-logo .header {
-  border: #1593e1;
   width: 5rem;
   padding: 10px;
 }
@@ -294,7 +407,6 @@ body {
   height: 18rem;
   display: flex;
   justify-content: end;
-
 }
 
 .page-rooms-footer .page-rooms-logo .footer {
@@ -303,17 +415,32 @@ body {
   margin-right: 10px;
 }
 
-.page-spa-container {
-  background-color: #cfe4f2;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: auto;
-  grid-template-areas:
-    "header header header header header header"
-    "main main main main main main"
-    "footer footer footer footer footer footer";
-  max-width: 100%;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.main-booking {
+  flex-direction: column;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 34rem);
+  grid-template-rows: repeat(2, 28rem);
+  gap: 5rem;
+  padding: 2rem;
+}
+
+.about-container {
+
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+
+
 .page-spa-container header {
   grid-area: header;
 }
@@ -325,7 +452,6 @@ body {
 
 .page-spa-container main {
   grid-area: main;
-  
 }
 
 .page-spa-container .spa {
@@ -348,12 +474,11 @@ body {
 .page-spa-container main .picture {
   display: flex;
   width: 70%;
-  border:  solid 1px;
+  border: solid 1px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   flex-direction: row;
-  
 }
 
 .page-spa-container .restaurant {
@@ -373,7 +498,90 @@ body {
 }
 
 .page-spa-container footer .logo-footer {
- margin-right: 10px;
+  margin-right: 10px;
   width: 6rem;
   padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+  .nav_page_sec {
+    margin-left: 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "grid_header "
+      "grid_main "
+      "grid_aside "
+      "grid-bottom "
+     ;
+
+    position: relative;
+  }
+
+  .grid-bottom {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .pic_box {
+    margin: 0;
+  }
+  
+  .contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container .grid_header {
+    grid-area: grid_header;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+
+  .grid-container .main_aside_first h1 {
+    color: white;
+  }
+
+  .grid-container .main_aside_first h2 {
+    display: none;
+  }
+
+  .grid-container .main_article h2 {
+    margin: 0px;
+    line-height: 1;
+  }
+
+  .grid-container .main_article p {
+    margin-top: 40px;
+    line-height: 1.5;
+  }
+
+  .grid_aside {
+    grid-area: grid_aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .pic_box {
+    margin-top: 82px;
+  }
+
+  .grid_footer {
+    grid-area: grid_footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 53rem;
+  }
 }
